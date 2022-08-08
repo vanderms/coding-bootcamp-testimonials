@@ -86,20 +86,15 @@ $breakpoints: (
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: url(/images/pattern-curve.svg);
+  background-position: bottom left;
+  background-size: 17.8125rem 4.5rem;
+  background-repeat: no-repeat;
 
-  .grow-1 {
-    flex-grow: 1;
+  @include media(xl){
+    background-size: 38.125rem 9.625rem;
   }
-
-  .curve {
-    width: 17.8125rem;
-    height: 4.5rem;
-
-    @include media(xl) {
-      width: 38.125rem;
-      height: 9.375rem;
-    }
-  }
+  
 }
 
 .testimonial-card {
