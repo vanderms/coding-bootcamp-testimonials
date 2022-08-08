@@ -19,11 +19,11 @@ const Testimonails = [
 
 const state = { current: 0 };
 
-const card = document.querySelector('.testimonials-card');
+const card = document.querySelector('.testimonial-card');
 
 const pictureContainer = card.querySelector('.picture-container');
 const customerPicture = document.createElement('img');
-customerPicture.className = 'picture';
+customerPicture.className = 'customer-picture';
 customerPicture.alt = '';
 pictureContainer.appendChild(customerPicture);
 
@@ -35,7 +35,7 @@ const customerRole = card.querySelector('.role');
 
 const update = (index) => {
   state.current = Math.abs(index) % Testimonails.length;
-  const person = Testimonails[ index % Testimonails.length ];
+  const person = Testimonails[ state.current ];
   customerPicture.src = person.picture;
   customerPicture.alt = person.name;
   customerName.textContent = person.name;
@@ -44,3 +44,14 @@ const update = (index) => {
 }
 
 update(0);
+
+card.querySelector('.prev-btn').addEventListener('click', () => {
+  update(state.current + 1);
+});
+
+card.querySelector('.next-btn').addEventListener('click', () => {
+  update(state.current - 1);
+});
+
+
+

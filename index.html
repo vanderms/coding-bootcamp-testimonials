@@ -4,9 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
   <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,40 +15,36 @@
 </head>
 
 <body>
+  <main class="main">
+    <div class="container">
+      <header class="sr-only">
+        <h1>Coding Bootcamp Testimonials</h1>
+      </header>
+      <article class="testimonial-card">
 
-  <main>
-    <header class="sr-only">
-      <h1>Coding Bootcamp Testimonials</h1>
-    </header>
-    <article class="testimonials-card">
-      <div class="container">
         <div class="picture-container">
-          <img src="/images/pattern-bg.svg" alt="">
+          <img src="/images/pattern-bg.svg" alt="" class="bg-pattern">
+          <div class="buttons">
+            <button aria-label="see previous testimonial" class="prev-btn">
+              <img src="/images/icon-prev.svg" alt="">
+            </button>
+            <button aria-label="see next testimonial" class="next-btn">
+              <img src="/images/icon-next.svg" alt="">
+            </button>
+          </div>
         </div>
-        <figure>
-          <blockquote class="testimonial">
-
-          </blockquote>
+        <figure class="figure">
+          <blockquote class="testimonial"></blockquote>
           <figcaption class="author">
             <span class="name"></span>
             <span class="role"></span>
           </figcaption>
         </figure>
-      </div>
-    </article>
-
-
+      </article>
+    </div>
+    <div class="grow-1"></div>
+    <img src="/images/pattern-curve.svg" alt="" class="curve">
   </main>
-
-
-
-
-
-
-
-
-
-
   <script type="module" src="/main.js"></script>
 </body>
 

@@ -30,6 +30,12 @@ img {
   height: auto;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 $breakpoints: (
   sm: 22rem,
   md: 45rem,
@@ -72,4 +78,190 @@ $breakpoints: (
   @include media(xl) {
     max-width: 69.375rem;
   }
+}
+
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .grow-1 {
+    flex-grow: 1;
+  }
+
+  .curve {
+    width: 17.8125rem;
+    height: 4.5rem;
+
+    @include media(xl) {
+      width: 38.125rem;
+      height: 9.375rem;
+    }
+  }
+}
+
+.testimonial-card {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.625rem;
+
+  @include media(xl) {
+    margin-top: 3.125rem;
+    grid-template-columns: 39.6875rem 43.5625rem;
+    gap: 0;
+  }
+
+  .picture-container {
+    position: relative;
+    padding: 1.875rem 2.3125rem 1.5313rem;
+    width: 100%;
+
+    @include media(xl) {
+      order: 1;
+      padding: 3.9375rem 5.75rem 3.375rem 4.0625rem;
+      margin-left: -8.125rem;
+    }
+  }
+
+  .bg-pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .customer-picture {
+    position: relative;
+    z-index: 1;
+  }
+
+  .buttons {
+    position: absolute;
+    bottom: 0.2813rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    z-index: 2;
+    width: 5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    border-radius: 999px;
+    background: #FFFFFF;
+    box-shadow: 0px 15px 20px -10px rgba(36, 36, 113, 0.0991313);
+
+    @include media(xl) {
+      width: 7rem;
+      height: 3.5rem;
+      bottom: 1.625rem;
+      left: 3.875rem;
+      right: auto;
+      margin-inline: 0;
+    }
+  }
+
+  .next-btn img,
+  .prev-btn img {
+    width: 0.8125rem;
+    height: 1.25rem;
+  }
+
+  .figure {
+    position: relative;
+
+    @include media(xl) {
+      margin-top: 10.25rem;
+      z-index: 10;
+    }
+  }
+
+  .figure::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-position: center;
+    background-image: url(/images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3.75rem;
+    height: 3.125rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+
+    @include media(xl) {
+      width: 7.5rem;
+      height: 6.25rem;
+      left: 5.9375rem;
+      top: 0;
+      right: auto;
+      margin-inline: auto;
+    }
+
+  }
+
+  .testimonial {
+    margin-top: 1.5625rem;
+    position: relative;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #202047;
+
+    @include media(xl) {
+      margin-top: 4rem;
+      font-weight: 300;
+      font-size: 2rem;
+      line-height: 2.75rem;
+      text-align: left;
+    }
+  }
+
+  .author {
+    margin-top: 1.1875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media(xl) {
+      margin-top: 2rem;
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+  }
+
+  .name {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    text-align: center;
+    color: #202047;
+
+    @include media(xl) {
+      font-size: 1.25rem;
+      line-height: 2.375rem;
+    }
+  }
+
+  .role {
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    text-align: center;
+    color: #B9B9CE;
+
+    @include media(xl) {
+      font-size: 1.25rem;
+      line-height: 2.375rem;
+    }
+  }
+
 }
